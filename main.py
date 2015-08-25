@@ -12,6 +12,12 @@ from bottle import(
 
 from bottle import mako_template as template #use mako template
 
+
+@route("/")
+@view("mainpage.tpl")
+def main_page():
+    return 
+
 @route("/example1")
 def html_example1(name="WOW"):
     return template("<h1>Hello ${name}</h1>", name=name)
@@ -26,4 +32,4 @@ def html_exampl2(name="WOW"):
 def index(name):
     return template('<b>Hello Mako ${name}</b>!', name=name)
 
-run(host='diodev.fr', port=8088)
+run(host='diodev.fr', port=8088, debug=True)
