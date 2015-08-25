@@ -32,4 +32,10 @@ def html_exampl2(name="WOW"):
 def index(name):
     return template('<b>Hello Mako ${name}</b>!', name=name)
 
+
+@route('/css/<filename>')
+def send_static(filename):
+    return static_file(filename, root='static/css')
+
+
 run(host='diodev.fr', port=8088, debug=True)
