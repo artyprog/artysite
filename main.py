@@ -32,6 +32,9 @@ def html_exampl2(name="WOW"):
 def index(name):
     return template('<b>Hello Mako ${name}</b>!', name=name)
 
+@route('/img/<filename>')
+def send_static(filename):
+    return static_file(filename, root='static/img')
 
 @route('/css/<filename>')
 def send_static(filename):
