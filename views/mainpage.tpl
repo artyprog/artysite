@@ -51,7 +51,7 @@
 <section class="container px2 py3">
   <h1 class="mt0">
     <a href="#" class="black">
-      Blog
+      Blog - Dernier article
     </a>
   </h1>
   <div class="clearfix mxn2">
