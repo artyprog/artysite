@@ -14,7 +14,7 @@
   <nav class="clearfix white">
     <div class="sm-col">
       <a href="/" class="btn">Accueil</a>
-      <a href="/" class="btn">Burgers</a>
+      <a href="/" class="btn">RapydScript</a>
       <a href="/" class="btn">Fries</a>
     </div>
     <div class="sm-col-right">
