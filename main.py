@@ -41,4 +41,4 @@ def send_static(filename):
     return static_file(filename, root='static/css')
 
 
-run(host='diodev.fr', port=8088, debug=True)
+run(host='salvatore.diodev.fr', port=80, debug=True)

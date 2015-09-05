@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<header class="center px3 py4 white bg-black bg-cover bg-center"   style="background-image: url(https://pixabay.com/get/09a27c30172518551f71/1440944720/light-bulb-503881_1280.jpg?direct);background-size:contain;background-position:center center;background-repeat:no-repeat">
+<header class="center px3 py2 white bg-black bg-cover bg-center"   style="background-image: url(img/drop-of-water-545377_1920.jpg);/*background-size:contain*/;background-position:center center;background-repeat:no-repeat">
   
   <nav class="clearfix white">
     <div class="sm-col">
