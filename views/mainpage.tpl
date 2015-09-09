@@ -4,12 +4,14 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
-    <title>Salvatore & Co</title>
+    <title>Salvatore & Compagnie</title>
     <link rel="stylesheet" href="css/basscss.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 
-<header class="center px3 py2 white bg-black bg-cover bg-center"   style="background-image: url(img/drop-of-water-545377_1920.jpg);/*background-size:contain*/;background-position:center center;background-repeat:no-repeat">
+<header class="center px3 py2 white bg-black bg-cover bg-center"   style="background-image: url(img/market-839574_1280.jpg);/*background-size:contain*/;background-position:center center;background-repeat:no-repeat">
+  
   
   <nav class="clearfix white">
     <div class="sm-col">
@@ -21,32 +23,15 @@
       <a href="/" class="btn py2">About</a>
     </div>
   </nav>
+  
+
   <div class="center px2">
-    <h1 class="h1 h0-responsive caps mt4 mb0 regular">Hamburgers</h1>
-    <p class="h3">Artisinal ground chuck creations</p>
-    <a href="#" class="h3 btn btn-primary mb4">Pancake</a>
+    <h1 class="h1 h0-responsive  mt4 mb0 regular">Spaghetti e Parmigiano</h1>
+    <p class="h2" style="padding-bottom:100px;">
+    <i></i></p>
   </div>
 </header>
 
-
-
-
-<section class="container px2 py3">
-  <div class="clearfix mxn2">
-    <div class="sm-col sm-col-4 px2">
-      <h2 class="h1 mb0">Bacon</h2>
-      <p>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin.</p>
-    </div>
-    <div class="sm-col sm-col-4 px2">
-      <h2 class="h1 mb0">Bratwurst</h2>
-      <p>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin.</p>
-    </div>
-    <div class="sm-col sm-col-4 px2">
-      <h2 class="h1 mb0">Andouille</h2>
-      <p>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin.</p>
-    </div>
-  </div>
-</section>
 
 <section class="container px2 py3">
   <h1 class="mt0">

@@ -1,4 +1,7 @@
 import bottle
+from wheezy.template.engine import Engine
+from wheezy.template.ext.core import CoreExtension
+from wheezy.template.loader import DictLoader
 
 from bottle import(
         run,
@@ -12,11 +15,26 @@ from bottle import(
 
 from bottle import mako_template as template #use mako template
 
+template = """\
+@require(name)
+Hello, @name"""
 
-@route("/")
+engine = Engine(
+    loader=DictLoader({'x': template}),
+    extensions=[CoreExtension()]
+)
+template_w = engine.get_template('x')
+
+
+
+@route("/main")
 @view("mainpage.tpl")
 def main_page():
     return 
+
+@route("/")
+def working():
+    return "Site en maintenance"
 
 @route("/example1")
 def html_example1(name="WOW"):
@@ -40,5 +58,10 @@ def send_static(filename):
 def send_static(filename):
     return static_file(filename, root='static/css')
 
+@route('/photos')
+def display_photos():
+    return template_w.render({'name': 'John'})
 
-run(host='salvatore.diodev.fr', port=80, debug=True)
+
+
+run(host='www.diodev.fr', port=80, reloader=True, debug=True)
