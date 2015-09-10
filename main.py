@@ -2,6 +2,7 @@ import bottle
 from wheezy.template.engine import Engine
 from wheezy.template.ext.core import CoreExtension
 from wheezy.template.loader import DictLoader
+from wheezy.template.loader import FileLoader
 
 from bottle import(
         run,
@@ -19,12 +20,20 @@ template = """\
 @require(name)
 Hello, @name"""
 
-engine = Engine(
+engine_dict = Engine(
     loader=DictLoader({'x': template}),
     extensions=[CoreExtension()]
 )
-template_w = engine.get_template('x')
 
+template_w = engine_dict.get_template('x')
+
+searchpath = ['./static/templates-wheezy']
+engine = Engine(
+    loader=FileLoader(searchpath),
+    extensions=[CoreExtension()]
+)
+
+template = engine.get_template('main.html')
 
 
 @route("/main")
@@ -54,6 +63,11 @@ def index(name):
 def send_static(filename):
     return static_file(filename, root='static/img')
 
+@route('/wh/<filename>')
+def send_static(filename):
+    return static_file(filename, root='static/templates-wheezy')
+
+
 @route('/css/<filename>')
 def send_static(filename):
     return static_file(filename, root='static/css')
@@ -62,6 +76,9 @@ def send_static(filename):
 def display_photos():
     return template_w.render({'name': 'John'})
 
+@route('/wheezy')
+def display_wheezy():
+    return template.render('main.html')
 
 
 run(host='www.diodev.fr', port=80, reloader=True, debug=True)
