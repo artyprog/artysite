@@ -1,0 +1,39 @@
+@(
+import time
+x = time.time()
+)
+
+<html>
+    <head>
+        <title>
+        @def mtitle():
+        @end
+        @mtitle() - My Site</title>
+    </head>
+    <body>
+        X : @x!s
+        <div id="content">
+            @def contenu(x):
+            @end
+            @contenu(x)
+        </div>
+        <div>
+            @def cont():
+            @end
+            @cont()
+        </div>
+        <div>
+            @def pied():
+            @end
+            @pied()
+        </div>
+        <div>
+            @def footer():
+            @end
+            @footer()
+        </div>
+    </body>
+</html>
+
+
+

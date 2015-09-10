@@ -3,6 +3,7 @@ from wheezy.template.engine import Engine
 from wheezy.template.ext.core import CoreExtension
 from wheezy.template.loader import DictLoader
 from wheezy.template.loader import FileLoader
+from wheezy.template.ext.code import CodeExtension
 
 from bottle import(
         run,
@@ -30,10 +31,10 @@ template_w = engine_dict.get_template('x')
 searchpath = ['./static/templates-wheezy']
 engine = Engine(
     loader=FileLoader(searchpath),
-    extensions=[CoreExtension()]
+    extensions=[CoreExtension(),CodeExtension()]
 )
 
-template = engine.get_template('main.html')
+template = engine.get_template('child.html')
 
 
 @route("/main")
@@ -78,7 +79,8 @@ def display_photos():
 
 @route('/wheezy')
 def display_wheezy():
-    return template.render('main.html')
+    d = {'name': ['a','b','c','d']}
+    return template.render(d)
 
 
 run(host='www.diodev.fr', port=80, reloader=True, debug=True)
