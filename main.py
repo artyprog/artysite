@@ -58,7 +58,6 @@ def send_static(filepath):
 def send_static(filepath):
     return static_file(filepath, root='static/fgalery/json')
 
-
 @route('/albums/<filepath:path>')
 def send_static(filepath):
     return static_file(filepath, root='static/albums')  
@@ -67,8 +66,8 @@ def send_static(filepath):
 def display_famille():
     return template_famille.render("")
 
-@route('/photo') 
-def display_photos():
+@route('/photo/<im>') 
+def display_photos(im):
     data = {"data_json":"data.json", "data_album" : "mygall" }
     return template_photo.render({"data" : data})
 

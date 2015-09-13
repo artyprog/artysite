@@ -12,6 +12,7 @@ var minupscale = 640 * 480;
 var thumbrt = 16/9 - 5/3;
 var cutrt = 0.15;
 
+
 Element.Events.hashchange =
 {
   onAdd: function()
@@ -280,6 +281,7 @@ function onMainReady()
   if(imgs.data[eidx].file)
   {
     var img = imgs.data[eidx].file[0];
+    
     dsc.push("<a title=\"Download image\" href=\"" + encodeURI(img) + "\"><img src=\"/imgfgal/eye.png\"/></a>");
     eimg.addEvent('click', function() { window.location = img; });
     eimg.setStyle('cursor', 'pointer'); // fallback
