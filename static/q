@@ -69,8 +69,8 @@ def display_famille():
 
 @route('/photo') 
 def display_photos():
-    data = {"data_json":"data.json", "data_album" : "mygall" }
-    return template_photo.render({"data" : data})
+    data = {"data_json":"data.json", "album" : "mygall" }
+    return template_photo.render(data)
 
 @route('/wheezy')
 def display_wheezy():

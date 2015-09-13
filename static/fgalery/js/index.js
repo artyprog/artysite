@@ -1,7 +1,8 @@
 // fgallery: a modern, minimalist javascript photo gallery
 // Copyright(c) 2003-2014 by wave++ "Yuri D'Elia" <wavexx@thregr.org>
 // Distributed under GPL2 (see COPYING) WITHOUT ANY WARRANTY.
-var datafile = 'data.json';
+var datafile = data_json; //valeur déclarée dans le template photo.html
+var album = data_album
 var padding = 22;
 var duration = 500;
 var thrdelay = 1500;
@@ -649,8 +650,6 @@ function init()
 {
 
   datafile_url = '/jsonfgal/' 
-
-  alert( datafile_url + datafile)
 
   if(!("devicePixelRatio" in window))
     window.devicePixelRatio = 1;
